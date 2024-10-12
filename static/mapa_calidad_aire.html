@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d00bd2e01115166d0974ec4aebb941d0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d00bd2e01115166d0974ec4aebb941d0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d00bd2e01115166d0974ec4aebb941d0 = L.map(
+                "map_d00bd2e01115166d0974ec4aebb941d0",
+                {
+                    center: [17.2954844275, 0.5273942140148552],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_90f2262479cec80e1a4a4a2e98c00e0c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_90f2262479cec80e1a4a4a2e98c00e0c.addTo(map_d00bd2e01115166d0974ec4aebb941d0);
+        
+    
+            var marker_88e9a07bfbb95cf1080029f19dfb6f79 = L.marker(
+                [26.1551249, 50.5344606],
+                {}
+            ).addTo(map_d00bd2e01115166d0974ec4aebb941d0);
+        
+    
+            var icon_b836db4e88e6e5f43e719cf010f0d670 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_88e9a07bfbb95cf1080029f19dfb6f79.setIcon(icon_b836db4e88e6e5f43e719cf010f0d670);
+        
+    
+        var popup_15bbe618c19995fd44b10992be3e1dcd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_75d629b6dabb58c37ee2b75c4add4d2b = $(`<div id="html_75d629b6dabb58c37ee2b75c4add4d2b" style="width: 100.0%; height: 100.0%;">Bahrain: AQI 165</div>`)[0];
+                popup_15bbe618c19995fd44b10992be3e1dcd.setContent(html_75d629b6dabb58c37ee2b75c4add4d2b);
+            
+        
+
+        marker_88e9a07bfbb95cf1080029f19dfb6f79.bindPopup(popup_15bbe618c19995fd44b10992be3e1dcd)
+        ;
+
+        
+    
+    
+            var marker_35de4850f76baa68885f28184fd7b677 = L.marker(
+                [-0.2864982, 36.0514231],
+                {}
+            ).addTo(map_d00bd2e01115166d0974ec4aebb941d0);
+        
+    
+            var icon_3cb35188d580541ed7a50a9d2ddb5ba6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_35de4850f76baa68885f28184fd7b677.setIcon(icon_3cb35188d580541ed7a50a9d2ddb5ba6);
+        
+    
+        var popup_236cbfa022961dbdba0a8a0e0d377c61 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3b0b787b289933a7084bba395d0d1811 = $(`<div id="html_3b0b787b289933a7084bba395d0d1811" style="width: 100.0%; height: 100.0%;">Bangladesh: AQI 141</div>`)[0];
+                popup_236cbfa022961dbdba0a8a0e0d377c61.setContent(html_3b0b787b289933a7084bba395d0d1811);
+            
+        
+
+        marker_35de4850f76baa68885f28184fd7b677.bindPopup(popup_236cbfa022961dbdba0a8a0e0d377c61)
+        ;
+
+        
+    
+    
+            var marker_0720ffce49726f805686584c9ea58eb9 = L.marker(
+                [-11.8775768, 17.5691241],
+                {}
+            ).addTo(map_d00bd2e01115166d0974ec4aebb941d0);
+        
+    
+            var icon_149c1b9f48ea5eed9019878b85b4b7f5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0720ffce49726f805686584c9ea58eb9.setIcon(icon_149c1b9f48ea5eed9019878b85b4b7f5);
+        
+    
+        var popup_54134d227ebea87b1007691e75afc0ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ffad3ed18bda7ca78151545df6e9a2fa = $(`<div id="html_ffad3ed18bda7ca78151545df6e9a2fa" style="width: 100.0%; height: 100.0%;">Angola: AQI 113</div>`)[0];
+                popup_54134d227ebea87b1007691e75afc0ff.setContent(html_ffad3ed18bda7ca78151545df6e9a2fa);
+            
+        
+
+        marker_0720ffce49726f805686584c9ea58eb9.bindPopup(popup_54134d227ebea87b1007691e75afc0ff)
+        ;
+
+        
+    
+    
+            var marker_1f5db055ac7e797717db9b838a2c9812 = L.marker(
+                [4.491976149999999, -75.74135085294314],
+                {}
+            ).addTo(map_d00bd2e01115166d0974ec4aebb941d0);
+        
+    
+            var icon_2adddda4bc427c68c0784f72c23c8779 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1f5db055ac7e797717db9b838a2c9812.setIcon(icon_2adddda4bc427c68c0784f72c23c8779);
+        
+    
+        var popup_70ee8a3dfe0d66186a8e45a28f17e3b0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_320f121c8a3caa8263b4d3c32594f379 = $(`<div id="html_320f121c8a3caa8263b4d3c32594f379" style="width: 100.0%; height: 100.0%;">Armenia: AQI 76</div>`)[0];
+                popup_70ee8a3dfe0d66186a8e45a28f17e3b0.setContent(html_320f121c8a3caa8263b4d3c32594f379);
+            
+        
+
+        marker_1f5db055ac7e797717db9b838a2c9812.bindPopup(popup_70ee8a3dfe0d66186a8e45a28f17e3b0)
+        ;
+
+        
+    
+    
+            var marker_dd4a8e1905663db932be581f1c8611d9 = L.marker(
+                [-10.3333333, -53.2],
+                {}
+            ).addTo(map_d00bd2e01115166d0974ec4aebb941d0);
+        
+    
+            var icon_da449a79ea9ac6c81898411462f61a70 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_dd4a8e1905663db932be581f1c8611d9.setIcon(icon_da449a79ea9ac6c81898411462f61a70);
+        
+    
+        var popup_eeeb566425ba76918fddec812da3ba1b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1da254a2278358eee28ede47be0df601 = $(`<div id="html_1da254a2278358eee28ede47be0df601" style="width: 100.0%; height: 100.0%;">Brazil: AQI 67</div>`)[0];
+                popup_eeeb566425ba76918fddec812da3ba1b.setContent(html_1da254a2278358eee28ede47be0df601);
+            
+        
+
+        marker_dd4a8e1905663db932be581f1c8611d9.bindPopup(popup_eeeb566425ba76918fddec812da3ba1b)
+        ;
+
+        
+    
+    
+            var marker_f0ec3772da079183a03735444eedd036 = L.marker(
+                [28.0000272, 2.9999825],
+                {}
+            ).addTo(map_d00bd2e01115166d0974ec4aebb941d0);
+        
+    
+            var icon_2cc8646c142f232999a73371e52b8bff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f0ec3772da079183a03735444eedd036.setIcon(icon_2cc8646c142f232999a73371e52b8bff);
+        
+    
+        var popup_8448fc66d5984c45c4aaab6b5e9a47c4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ae90620e4ef810e1c9ccf6ba914290bf = $(`<div id="html_ae90620e4ef810e1c9ccf6ba914290bf" style="width: 100.0%; height: 100.0%;">Algeria: AQI 65</div>`)[0];
+                popup_8448fc66d5984c45c4aaab6b5e9a47c4.setContent(html_ae90620e4ef810e1c9ccf6ba914290bf);
+            
+        
+
+        marker_f0ec3772da079183a03735444eedd036.bindPopup(popup_8448fc66d5984c45c4aaab6b5e9a47c4)
+        ;
+
+        
+    
+    
+            var marker_23093d5878d50acf25660b63b255131f = L.marker(
+                [-34.9964963, -64.9672817],
+                {}
+            ).addTo(map_d00bd2e01115166d0974ec4aebb941d0);
+        
+    
+            var icon_1340e54ad2a7d23365821bff68fe0c2c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_23093d5878d50acf25660b63b255131f.setIcon(icon_1340e54ad2a7d23365821bff68fe0c2c);
+        
+    
+        var popup_a29114dfea9af6e988bc180719c88ade = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d4c7ff7b8f53b8ec181c715df9be9d0d = $(`<div id="html_d4c7ff7b8f53b8ec181c715df9be9d0d" style="width: 100.0%; height: 100.0%;">Argentina: AQI 63</div>`)[0];
+                popup_a29114dfea9af6e988bc180719c88ade.setContent(html_d4c7ff7b8f53b8ec181c715df9be9d0d);
+            
+        
+
+        marker_23093d5878d50acf25660b63b255131f.bindPopup(popup_a29114dfea9af6e988bc180719c88ade)
+        ;
+
+        
+    
+    
+            var marker_1edbe66fc578a4d1eaf3052f4a0d0441 = L.marker(
+                [50.6402809, 4.6667145],
+                {}
+            ).addTo(map_d00bd2e01115166d0974ec4aebb941d0);
+        
+    
+            var icon_7c8bf10ec4e1adbe464db73daafe6c76 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1edbe66fc578a4d1eaf3052f4a0d0441.setIcon(icon_7c8bf10ec4e1adbe464db73daafe6c76);
+        
+    
+        var popup_bf1a755f944943c74bd76263c25f5665 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_180952de9b1b251d5889eb7b327f235d = $(`<div id="html_180952de9b1b251d5889eb7b327f235d" style="width: 100.0%; height: 100.0%;">Belgium: AQI 61</div>`)[0];
+                popup_bf1a755f944943c74bd76263c25f5665.setContent(html_180952de9b1b251d5889eb7b327f235d);
+            
+        
+
+        marker_1edbe66fc578a4d1eaf3052f4a0d0441.bindPopup(popup_bf1a755f944943c74bd76263c25f5665)
+        ;
+
+        
+    
+    
+            var marker_a0639a06d69e5a775bece126450e5e01 = L.marker(
+                [44.3053476, 17.5961467],
+                {}
+            ).addTo(map_d00bd2e01115166d0974ec4aebb941d0);
+        
+    
+            var icon_c731099f56d89115d9c8af800f2a21fd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a0639a06d69e5a775bece126450e5e01.setIcon(icon_c731099f56d89115d9c8af800f2a21fd);
+        
+    
+        var popup_e30015d7a415ba6a40f179f92fa3fc92 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c6c84fa055dfec6f1bd5456c9d00427d = $(`<div id="html_c6c84fa055dfec6f1bd5456c9d00427d" style="width: 100.0%; height: 100.0%;">Bosnia and Herzegovina: AQI 58</div>`)[0];
+                popup_e30015d7a415ba6a40f179f92fa3fc92.setContent(html_c6c84fa055dfec6f1bd5456c9d00427d);
+            
+        
+
+        marker_a0639a06d69e5a775bece126450e5e01.bindPopup(popup_e30015d7a415ba6a40f179f92fa3fc92)
+        ;
+
+        
+    
+    
+            var marker_41289150743476997e0f69a0a96bfe68 = L.marker(
+                [-24.7761086, 134.755],
+                {}
+            ).addTo(map_d00bd2e01115166d0974ec4aebb941d0);
+        
+    
+            var icon_196c36ac4668ffcf44dd3e53587a9526 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_41289150743476997e0f69a0a96bfe68.setIcon(icon_196c36ac4668ffcf44dd3e53587a9526);
+        
+    
+        var popup_b4d60b46a5bfd29de86fc90e13150949 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3924055b02f288c29c9163680844d1fb = $(`<div id="html_3924055b02f288c29c9163680844d1fb" style="width: 100.0%; height: 100.0%;">Australia: AQI 56</div>`)[0];
+                popup_b4d60b46a5bfd29de86fc90e13150949.setContent(html_3924055b02f288c29c9163680844d1fb);
+            
+        
+
+        marker_41289150743476997e0f69a0a96bfe68.bindPopup(popup_b4d60b46a5bfd29de86fc90e13150949)
+        ;
+
+        
+    
+</script>
+</html>
