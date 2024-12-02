@@ -1,6 +1,5 @@
 from flask import Flask, render_template
-import os
-from analysis import cargar_datos_calidad_aire, analizar_calidad_aire, crear_mapa_interactivo
+from analysis import cargar_datos_calidad_aire, crear_mapa_interactivo
 
 app = Flask(__name__)
 
@@ -10,10 +9,9 @@ def index():
 
 @app.route('/analizar')
 def analizar():
-    ruta_csv = "C:/Users/Ximena/.kaggle/data_date.csv"
+    ruta_csv = "uploads/data_date.csv"  # Ruta del archivo CSV
     datos = cargar_datos_calidad_aire(ruta_csv)
-    ciudades_peor_calidad = analizar_calidad_aire(datos)
-    crear_mapa_interactivo(datos, ciudades_peor_calidad)
+    crear_mapa_interactivo(datos)
     return render_template('mapa.html')
 
 if __name__ == '__main__':

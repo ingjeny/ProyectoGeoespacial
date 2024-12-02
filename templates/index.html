@@ -1,35 +1,292 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analizador de Calidad del Aire</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: #212529;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
         }
-        h1 {
-            color: #333;
-        }
-        .btn {
-            background-color: #28a745;
+
+        /* Encabezado */
+        header {
+            background: linear-gradient(90deg, #28a745, #218838);
             color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .btn:hover {
-            background-color: #218838;
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        header .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        nav a.active {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Hero principal */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #e9ffe7, #c9f9cf);
+            padding: 60px 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        .hero img {
+            max-width: 50%;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero .hero-text h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #218838;
+        }
+
+        .hero .hero-text p {
+            font-size: 1.2rem;
+            color: #495057;
+            margin: 20px 0;
+        }
+
+        .hero .btn {
+            background: #28a745;
+            color: white;
+            padding: 10px 25px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            border-radius: 12px;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+
+        /* Sección de Características */
+        .features {
+            margin: 40px 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .features h2 {
+            text-align: center;
+            color: #28a745;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            border-radius: 15px 15px 0 0;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-body h5 {
+            color: #28a745;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-body p {
+            color: #495057;
+        }
+
+        /* Pie de página */
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        footer a {
+            color: #28a745;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos Responsivos */
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                margin-bottom: 10px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero img {
+                max-width: 100%;
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
+
 <body>
-    <h1>Analizador de Calidad del Aire</h1>
-    <p>Haz clic en el botón para analizar los datos de calidad del aire.</p>
-    <a href="/analizar" class="btn">Analizar Calidad del Aire</a>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmmy1nraf7Rq5bXzjhNJJ6ak86qD4Tpi7V8A&s" alt="Logo">
+                <h1>Analizador del Aire</h1>
+            </div>
+            <nav>
+                <a href="#inicio" class="active">Inicio</a>
+                <a href="#caracteristicas">Características</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero principal -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Conoce el Aire que Respiras</h1>
+            <p>Monitorea la calidad del aire en tiempo real y toma decisiones informadas para proteger tu salud y la de tu familia.</p>
+            <a href="/analizar" class="btn">Comenzar Ahora</a>
+        </div>
+        <img src="https://www.monitoreoambiental.com/wp-content/uploads/2018/10/Calidad-del-aire-ciudad-monitoreo-ambiental.jpg" alt="Calidad del aire">
+    </section>
+
+    <!-- Sección de Características -->
+    <section id="caracteristicas" class="features">
+        <h2>¿Qué te ofrece nuestra herramienta?</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://usscl.blob.core.windows.net/upload/2017/05/Contaminacion-1-1024x669.jpg" alt="Monitor" class="card-img-top">
+                        <div class="card-body">
+                            <h5>Monitor</h5>
+                            <p>Monitoreo de calidad del aire en tiempo real, detectando PM2.5, PM10 y más.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://i.blogs.es/73f374/contaminacion/450_1000.webp" alt="Alertas" class="card-img-top">
+                        <div class="card-body">
+                            <h5>Alertas</h5>
+                            <p>Alertas inmediatas para niveles críticos de contaminación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://climatica.coop/wp-content/uploads/2024/01/Ulan-Bator-900x600.jpg?w=390&q=90" alt="Estadísticas" class="card-img-top">
+                        <div class="card-body">
+                            <h5>Estadísticas</h5>
+                            <p>Estadísticas detalladas y reportes personalizados.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://www.unidiversidad.com.ar/cache/vivir-sin-aire-portada_1000_1100.jpg" alt="Consejos" class="card-img-top">
+                        <div class="card-body">
+                            <h5>Consejos</h5>
+                            <p>Consejos prácticos para mejorar la calidad del aire en tu entorno.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Analizador de Calidad del Aire. Todos los derechos reservados.</p>
+        <p><a href="#inicio">Inicio</a> | <a href="#contacto">Contáctanos</a></p>
+    </footer>
+
 </body>
+
 </html>
